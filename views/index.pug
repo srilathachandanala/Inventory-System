@@ -1,0 +1,26 @@
+extends layout 
+block content 
+  h2 Product Inventory 
+  a.btn.btn-primary.mb-3(href="/add") Add Product 
+
+  table.table.table-bordered 
+    thead 
+      tr 
+        th Name 
+        th Description 
+        th Quantity 
+        th Price 
+        th Manufacturer 
+        th Actions 
+
+    tbody 
+      each product in products 
+        tr 
+          td= product.name 
+          td= product.description 
+          td= product.quantity 
+          td= product.price 
+          td= product.manufacturer 
+          td 
+            a.btn.btn-warning.btn-sm(href="/edit/" + product.id) Update 
+            a.btn.btn-danger.btn-sm.ms-2(href="/delete/" + product.id) Delete

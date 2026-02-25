@@ -1,0 +1,21 @@
+extends layout 
+block content 
+  h2 Add Product 
+  form(method="POST" action="/add")
+    .mb-3 
+      label.form-label Product Name 
+      input.form-control(type="text", name= "name", required)
+    .mb-3 
+      label.form-label Description
+      input.form-control(type="text", name= "description", required)
+    .mb-3 
+      label.form-label Quantity
+      input.form-control(type="text", name= "quantity", required)
+    .mb-3 
+      label.form-label Price
+      input.form-control(type="text", name= "price", required)
+    .mb-3 
+      label.form-label Manufacturer
+      input.form-control(type="text", name= "manufacturer", required)
+    
+    button.btn.btn-success(type="submit") Add Product
